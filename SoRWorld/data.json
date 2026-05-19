@@ -1,0 +1,146 @@
+{
+    "progression_items": {
+        "agents": [
+            "Assassin",
+            "Athlete",
+            "Bartender",
+            "Businessman",
+            "Cannibal",
+            "Comedian",
+            "Cop",
+            "Doctor",
+            "Gangbanger",
+            "GangbangerB",
+            "Gorilla",
+            "Hacker",
+            "Hobo",
+            "Scientist",
+            "ShapeShifter",
+            "Shopkeeper",
+            "Slavemaster",
+            "Soldier",
+            "Thief",
+            "Vampire",
+            "Werewolf",
+            "Wrestler",
+            "Zombie",
+            "Firefighter",
+            "Mafia",
+            "RobotPlayer"
+            
+        ],
+        "dlc_agents": [
+            "Bouncer",
+            "Courier",
+            "Guard",
+            "Demolitionist",
+            "MechPilot",
+            "Alien"
+        ]
+    },
+    "useful_items": {
+        "traits":{
+
+        }
+    },
+    "filler_items": {
+        "currency": [
+            "Nuggets"
+        ],
+        "consumables": [
+            "Fud"
+        ]
+    },
+    "locations": {
+        "bq": [
+            "Assassin_BQ",
+            "Athlete_BQ",
+            "Bartender_BQ",
+            "Businessman_BQ",
+            "Cannibal_BQ",
+            "Comedian_BQ",
+            "Cop_BQ",
+            "Doctor_BQ",
+            "Gangbanger_BQ",
+            "GangbangerB_BQ",
+            "Gorilla_BQ",
+            "Hacker_BQ",
+            "Hobo_BQ",
+            "Scientist_BQ",
+            "ShapeShifter_BQ",
+            "Shopkeeper_BQ",
+            "Slavemaster_BQ",
+            "Soldier_BQ",
+            "Thief_BQ",
+            "Vampire_BQ",
+            "Werewolf_BQ",
+            "Wrestler_BQ",
+            "Zombie_BQ",
+            "Firefighter_BQ",
+            "Mafia_BQ",
+            "RobotPlayer_BQ"
+        ],
+        "dlc_bq": [
+            "Bouncer_BQ",
+            "Courier_BQ",
+            "Guard_BQ",
+            "Demolitionist_BQ",
+            "MechPilot_BQ",
+            "Alien_BQ"
+        ],
+        "achievements":[
+            "CompleteTutorial",
+            "CompleteAnyLevel",
+            "CompleteLevel1",
+            "CompleteLevel2",
+            "CompleteLevel3",
+            "CompleteLevel4",
+            "CompleteLevel5",
+            "CompleteLevel6",
+            "WinElection",
+            "KillMayor",
+            "NonViolentWin",
+            "BadEnding",
+            "CompleteAnyBigQuest",
+            "Floor2",
+            "Floor3",
+            "Floor4",
+            "Floor5",
+            "KilledKillerRobot",
+            "FoundAlien",
+            "RefrigeratorRun",
+            "KillVampireAsWerewolf",
+            "FallOffLevelEdge",
+            "CreateCustomCharacter",
+            "PutResurrectionInWater",
+            "HaveFourStatusEffects",
+            "EnslaveSlavemaster",
+            "WinArenaFight",
+            "KillEveryoneInLevel",
+            "AskNPCLeaveLevel",
+            "KillWithGravestone",
+            "GiveCyanideCocktail",
+            "ElectrocuteInWater",
+            "Assassin",
+            "Athlete",
+            "Bartender",
+            "Businessman",
+            "Cannibal",
+            "Comedian",
+            "Cop",
+            "GangbangerB",
+            "Gorilla",
+            "Scientist",
+            "ShapeShifter",
+            "Shopkeeper",
+            "Slavemaster",
+            "Vampire",
+            "Werewolf",
+            "Wrestler",
+            "Zombie",
+            "Firefighter",
+            "Mafia",
+            "RobotPlayer"
+        ]
+    }
+}
