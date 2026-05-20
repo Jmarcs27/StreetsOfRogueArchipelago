@@ -3,7 +3,7 @@
 ## Required Software
 
 - [Archipelago](https://github.com/ArchipelagoMW/Archipelago/releases/latest).
-- [BepinEx] (https://github.com/BepInEx/BepInEx/releases).
+- [BepinEx](https://github.com/BepInEx/BepInEx/releases).
 - [The SoR Archipelago Mod](https://github.com/Jmarcs27/StreetsOfRogueArchipelago/releases).
 
 ## BepinEx Setup
