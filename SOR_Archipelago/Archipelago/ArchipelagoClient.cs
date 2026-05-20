@@ -257,6 +257,7 @@ namespace SOR_Archipelago.Archipelago
 
             int bq = 0;
             int achievements = 0;
+            bool tutorialCheck = false;
             foreach (long location in locations)
             {
                 string l = session.Locations.GetLocationNameFromId(location, "Streets of Rogue");
@@ -264,7 +265,13 @@ namespace SOR_Archipelago.Archipelago
                     bq++;
                 else
                     achievements++;
+                if (l == "CompleteTutorial")
+                    tutorialCheck = true;
+
             }
+            // Fixes tutorial skip not sending a check
+            if (!tutorialCheck)
+                LocationCompleted("CompleteTutorial");
 
             if (bq >= bqCompleted && achievements >= achievementsCompleted)
             {

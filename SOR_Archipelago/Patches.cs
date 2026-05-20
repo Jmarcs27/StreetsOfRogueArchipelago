@@ -27,12 +27,15 @@ namespace SOR_Archipelago
         // Overrides the unlocked characters in character select to only include those unlocked via archipelago
         public static bool Unlocks_IsUnlocked_Patch(GameController ___gc, string unlockName, string unlockType, ref bool __result)
         {
-
+            
             if (SorArch.Instance == null || ___gc == null)
             {
                 SorArch.BepinLogger.LogError("SorArch instance or ___gc object is null in Unlocks_IsUnlocked_Patch when unlocking: " + unlockName);
                 return false;
             }
+
+            // Checks for victory in case timing was missed during the DoUnlock function
+            SorArch.Instance.HandleVictory();
 
             int nuggetsSpent = 0;
             foreach (Unlock unlock in ___gc.sessionDataBig.unlocks)
