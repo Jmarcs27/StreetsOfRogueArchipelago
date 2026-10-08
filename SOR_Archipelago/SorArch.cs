@@ -6,6 +6,7 @@ using BepInEx;
 using HarmonyLib;
 using UnityEngine;
 using BepInEx.Logging;
+using BepInEx.Configuration;
 using SOR_Archipelago.Archipelago;
 using SOR_Archipelago.Utils;
 using System.Reflection;
@@ -39,6 +40,10 @@ namespace SOR_Archipelago
 
         public static SorArch Instance { get; private set; }
 
+        private ConfigEntry<string> configUri;
+        private ConfigEntry<string> configSlotName;
+        private ConfigEntry<string> configPassword;
+
         private void Awake()
         {
             // Plugin startup logic
@@ -54,6 +59,24 @@ namespace SOR_Archipelago
             PatchPrefix(typeof(Unlocks), "AddNuggets", "Unlocks_AddNuggets_Patch");
             // PatchPrefix(typeof(Unlocks), "Awake2", "Unlocks_Start_Patch");
             // PatchPrefix(typeof(StatsScreen), "Start", "StatsScreen_Awake_Patch");
+
+            configUri = Config.Bind("General.ArchipelagoData",      // The section under which the option is shown
+                                         "Uri",  // The key of the configuration option in the configuration file
+                                         "localhost", // The default value
+                                         "The archieplago address. Example: archipelago.gg:38281"); // Description of the option to show in the config file
+
+            configSlotName = Config.Bind("General.ArchipelagoData",
+                                                "SlotName",
+                                                "Player1",
+                                                "The play slot name");
+            configPassword = Config.Bind("General.ArchipelagoData",
+                                                "Password",
+                                                "",
+                                                "The password for the archipelago address if applicable");
+
+            ArchipelagoClient.ServerData.Uri = configUri.Value;
+            ArchipelagoClient.ServerData.SlotName = configSlotName.Value;
+            ArchipelagoClient.ServerData.Password = configPassword.Value;
         }
 
         // Takes the file type, function name, and patch function name to add the patch as a prefix to the function
@@ -103,6 +126,10 @@ namespace SOR_Archipelago
                 if (GUI.Button(new Rect(16, 130, 100, 20), "Connect") &&
                     !ArchipelagoClient.ServerData.SlotName.IsNullOrWhiteSpace())
                 {
+                    // Sets the new connection defaults in config
+                    configUri.Value = ArchipelagoClient.ServerData.Uri;
+                    configSlotName.Value = ArchipelagoClient.ServerData.SlotName;
+                    configPassword.Value = ArchipelagoClient.ServerData.Password;
                     ArchipelagoClient.Connect();
                 }
             }

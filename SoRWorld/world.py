@@ -5,7 +5,7 @@ from typing import Any
 from worlds.AutoWorld import World
 
 # Imports of your world's files must be relative.
-from . import items, locations, web_world
+from . import items, locations, web_world, rules
 from . import options as sor_options  # rename due to a name conflict with World.options
 
 # APQuest will go through all the parts of the world api one step at a time,
@@ -53,6 +53,9 @@ class SoRWorld(World):
     # For better structure and readability, we put each of these in their own file.
     def create_regions(self) -> None:
         locations.create_all_locations(self)
+        
+    def set_rules(self) -> None:
+        rules.set_all_rules(self)
 
     def create_items(self) -> None:
         items.create_all_items(self)
