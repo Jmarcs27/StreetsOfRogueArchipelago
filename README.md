@@ -2,7 +2,7 @@
 
 ## Setup Guide
 
-- [Here]([https://github.com/ArchipelagoMW/Archipelago/releases/latest](https://github.com/Jmarcs27/StreetsOfRogueArchipelago/blob/main/setup_en.md)).
+- [Here](https://github.com/Jmarcs27/StreetsOfRogueArchipelago/blob/main/setup_en.md).
 
 ## State of the Mod
 
